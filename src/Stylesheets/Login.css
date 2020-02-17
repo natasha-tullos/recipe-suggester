@@ -43,7 +43,7 @@
   border-radius: 10px;
 }
 
-button:focus { 
+button:focus, button:hover { 
   outline: none; 
   background-color: rgba(235, 237, 235, 0.5);
   cursor: pointer;
