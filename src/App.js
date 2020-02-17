@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import Login from './Components/Login';
+import './Stylesheets/App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <h1 className="title">Macro Recipe Suggester</h1>
+        <p className="info-note">Welcome to the macro recipe suggester!</p>
+        <p className="info">
+          This app lets you add your macros, and suggests recipes within
+          the range of your macros.
+
+          Login below to get started!
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+        <Login />
     </div>
   );
 }
