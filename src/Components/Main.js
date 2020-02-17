@@ -7,8 +7,6 @@ const Main = ({ isAuthenticated, setAuth }) => {
   return (
     <div>
       <Navbar isAuthenticated={isAuthenticated} setAuth={setAuth} />
-      <p>Successfully authed, in private page now</p>
-
       <div className="macros-container">
         <h3>Enter Your Macros</h3>
 
