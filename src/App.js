@@ -1,9 +1,31 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 import Login from './Components/Login';
+import Signup from './Components/Signup';
 import './Stylesheets/App.css';
 
 function App() {
+  return (
+   <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/signup">
+          <Signup />
+        </Route>
+      </Switch>
+   </Router>
+  );
+}
+
+const Home = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,5 +42,6 @@ function App() {
     </div>
   );
 }
+
 
 export default App;
