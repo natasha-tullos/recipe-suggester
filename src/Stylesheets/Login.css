@@ -6,7 +6,11 @@
   margin-top: 30px;
 }
 
-.email-login-container label, .email-login-container button, .google-btn {
+.email-login-container label, 
+.email-login-container button, 
+.google-btn,
+.signup-link
+{
   font-family: 'Nanum Gothic', sans-serif;
 }
 
@@ -42,4 +46,9 @@
 button:focus { 
   outline: none; 
   background-color: rgba(235, 237, 235, 0.5);
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-size: 12px;
 }
