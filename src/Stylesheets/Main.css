@@ -2,7 +2,7 @@ h3 {
   font-family: 'Lemonada', cursive;
 }
 
-label, input {
+label, input, button {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
@@ -35,4 +35,11 @@ input {
 
 .units {
   margin-left: 20px;
+}
+
+.recipe-btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 15px;
 }

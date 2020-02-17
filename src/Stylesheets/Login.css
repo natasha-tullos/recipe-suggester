@@ -46,6 +46,7 @@
 button:focus { 
   outline: none; 
   background-color: rgba(235, 237, 235, 0.5);
+  cursor: pointer;
 }
 
 .signup-link {
