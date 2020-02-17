@@ -4,7 +4,7 @@ import firebase from 'firebase';
 import Firebase from '../FirebaseConfig';
 import '../Stylesheets/Login.css';
 
-const Login = () => {
+const Login = ({ isAuthenticated, setAuth }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [token, setToken] = useState();
@@ -16,11 +16,13 @@ const Login = () => {
     Firebase.auth().signInWithPopup(provider).then(function(result) {
       setToken(result.credential.accessToken);
       setUser(result.user);
+      setAuth(true);
     })
   }
 
   const loginWithEmail = async () => {
     await Firebase.auth().signInWithEmailAndPassword(email, password)
+      .then(result => setAuth(true))
       .catch(err => console.log(err))
   }
 
@@ -32,7 +34,7 @@ const Login = () => {
           className="email" 
           placeholder="email" 
           type="email" 
-          onChange={(text) => setEmail(text)}
+          onChange={(text) => setEmail(text.target.value)}
         />
 
         <label htmlFor="password">Password</label>
@@ -40,7 +42,7 @@ const Login = () => {
           className="password" 
           placeholder="password" 
           type="password" 
-          onChange={(text) => setPassword(text)}
+          onChange={(text) => setPassword(text.target.value)}
         />
 
         <button className="login-btn" onClick={() => loginWithEmail()}>Login</button>
