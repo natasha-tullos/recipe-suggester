@@ -31,6 +31,7 @@ const Main = ({ isAuthenticated, setAuth }) => {
             <p className="units">grams</p>
           </div>
 
+          <button className="recipe-btn">Find Recipes</button>
         </form>        
       </div>
 
