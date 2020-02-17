@@ -1,0 +1,52 @@
+.account-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.email-signup-container 
+{
+  font-family: 'Nanum Gothic', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.email-signup-container label {
+  padding: 5px;
+  font-weight: 600;
+}
+
+.email-signup-container input {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.signup-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.title {
+  font-family: 'Lemonada', cursive;
+}
+
+button:focus { 
+  outline: none; 
+  background-color: rgba(235, 237, 235, 0.5);
+}
+
+.success {
+  color: rgb(47, 194, 86);
+}
+
+.error {
+  color: rgb(194, 47, 47);
+}
