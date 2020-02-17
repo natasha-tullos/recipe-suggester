@@ -1,0 +1,38 @@
+h3 {
+  font-family: 'Lemonada', cursive;
+}
+
+label, input {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+.macros-container, form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+label {
+  padding: 5px;
+  font-weight: 600;
+}
+
+input {
+  width: 150px;
+  height: 30px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.units {
+  margin-left: 20px;
+}
