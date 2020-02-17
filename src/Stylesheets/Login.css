@@ -1,0 +1,21 @@
+.email-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.email-login-container label {
+  font-family: 'Nanum Gothic', sans-serif;
+  padding: 5px;
+  /* text-align: left; */
+  text-align: left;
+  font-weight: 600;
+}
+
+.email-login-container input {
+  width: 250px;
+  height: 30px;
+  margin-bottom: 20px;
+}
