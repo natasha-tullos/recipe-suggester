@@ -1,4 +1,4 @@
-.email-login-container {
+.email-login-container, .google-login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,11 +6,12 @@
   margin-top: 30px;
 }
 
-.email-login-container label {
+.email-login-container label, .email-login-container button, .google-btn {
   font-family: 'Nanum Gothic', sans-serif;
+}
+
+.email-login-container label {
   padding: 5px;
-  /* text-align: left; */
-  text-align: left;
   font-weight: 600;
 }
 
@@ -18,4 +19,27 @@
   width: 250px;
   height: 30px;
   margin-bottom: 20px;
+}
+
+.login-btn {
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.google-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+button:focus { 
+  outline: none; 
+  background-color: rgba(235, 237, 235, 0.5);
 }
