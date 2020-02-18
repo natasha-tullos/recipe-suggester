@@ -12,15 +12,11 @@ const Recipe = ({ isAuthenticated, setAuth }) => {
     await fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${process.env.REACT_APP_SPOON_KEY}`, { method: 'GET' })
       .then(response => response.json())
       .then(response => setRecipe(response))
-
-      // console.log(recipe, ' recipe')
   }, [])
 
-  console.log(recipe, ' recipe?')
   return (
     <div>
       <Navbar isAuthenticated={isAuthenticated} setAuth={setAuth} />
-      {/* <h1>{recipe.name}</h1> */}
       {recipe ? (
           <div className="recipe-wrapper">
             <h1 className="title">{recipe.title}</h1>
