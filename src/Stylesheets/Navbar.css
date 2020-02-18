@@ -16,4 +16,10 @@ nav {
 
 a:hover {
   cursor: pointer;
+  color: rgb(199, 121, 217);
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #000
 }
