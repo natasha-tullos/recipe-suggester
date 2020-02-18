@@ -21,5 +21,6 @@ a:hover {
 
 .nav-link {
   text-decoration: none;
-  color: #000
+  color: #000;
+  margin-left: 20px;
 }
