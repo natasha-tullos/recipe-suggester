@@ -17,7 +17,6 @@ const Main = ({ isAuthenticated, setAuth }) => {
       })
       .then(response => response.json())
       .then(response => setRecipes(response))
-
   }
 
   return (
