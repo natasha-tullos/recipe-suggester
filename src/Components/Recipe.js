@@ -7,11 +7,15 @@ import '../Stylesheets/Recipe.css';
 const Recipe = ({ isAuthenticated, setAuth }) => {
   const [recipe, setRecipe] = useState();
   let { recipeId } = useParams();
-
-  useEffect(async () => {
+  
+  const getRecipe = async () => {
     await fetch(`https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${process.env.REACT_APP_SPOON_KEY}`, { method: 'GET' })
       .then(response => response.json())
       .then(response => setRecipe(response))
+  }
+
+  useEffect(() => {
+    getRecipe();
   }, [])
 
   return (
@@ -41,9 +45,19 @@ const Recipe = ({ isAuthenticated, setAuth }) => {
 
             <div className="recipe-instructions-wrapper">
               <h3 className="instructions-title">Instructions</h3>
-              <ol>
-                {recipe.analyzedInstructions[0].steps.map((steps, idx) => <li>{steps.step}</li>)}
-              </ol>
+              {
+                recipe.instructions ? 
+                  (
+                    <ol>
+                      {recipe.analyzedInstructions[0].steps.map((steps, idx) => <li>{steps.step}</li>)}
+                    </ol>
+                  )
+                : 
+                <p>
+                  No instructions were found, but we found the source for the recipe  
+                  <a id="lost-instructions" href={recipe.sourceUrl}>here</a>
+                </p>
+              }
             </div>
           </div>
         )

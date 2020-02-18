@@ -21,3 +21,7 @@ li {
 .prep-info, .ingredients-info {
   margin-bottom: 30px;
 }
+
+#lost-instructions {
+  margin-left: 3px;
+}
