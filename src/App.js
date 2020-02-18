@@ -12,6 +12,7 @@ import {
 import Login from './Components/Login';
 import Signup from './Components/Signup';
 import Main from './Components/Main';
+import Recipe from './Components/Recipe';
 import './Stylesheets/App.css';
 
 function App() {
@@ -46,7 +47,10 @@ function App() {
           <Signup />
         </Route>
         <PrivateRoute path="/home">
-          <Main />
+          <Main isAuthenticated={isAuthenticated} setAuth={setAuth} />
+        </PrivateRoute>
+        <PrivateRoute path="/recipe/:recipeId">
+          <Recipe isAuthenticated={isAuthenticated} setAuth={setAuth} />
         </PrivateRoute>
       </Switch>
    </Router>

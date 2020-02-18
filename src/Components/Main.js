@@ -64,7 +64,7 @@ const Main = ({ isAuthenticated, setAuth }) => {
           recipes.map((recipe, idx) => (
             <div className="recipe-image-wrapper">
               <div className="col">
-                <a href="#">
+                <a href={`/recipe/${recipe.id}`}>
                   <img className="recipe-image" key={idx} src={recipe.image} />
                 </a>
                 <div className="recipe-text">
