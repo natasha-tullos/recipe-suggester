@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import Navbar from './Navbar';
 import '../Stylesheets/Main.css';
@@ -62,11 +63,11 @@ const Main = ({ isAuthenticated, setAuth }) => {
       <div className="recipe-container">
         {recipes ? 
           recipes.map((recipe, idx) => (
-            <div className="recipe-image-wrapper">
-              <div className="col">
-                <a href={`/recipe/${recipe.id}`}>
-                  <img className="recipe-image" key={idx} src={recipe.image} />
-                </a>
+            <div className="recipe-image-wrapper" key={idx}>
+              <div className="col" key={idx}>
+                <Link to={`/recipe/${recipe.id}`}>
+                  <img className="recipe-image" src={recipe.image} />
+                </Link>
                 <div className="recipe-text">
                   <p className="recipe-title">{recipe.title}</p>
                   <div className="nutrition-facts">
