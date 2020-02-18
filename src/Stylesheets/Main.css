@@ -1,12 +1,12 @@
-h3 {
+h3, .recipe-title {
   font-family: 'Lemonada', cursive;
 }
 
-label, input, button {
+label, input, button, .nutrition-facts {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
-.macros-container, form {
+.macros-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,7 +23,6 @@ input {
   width: 150px;
   height: 30px;
   margin-bottom: 20px;
-  margin-left: 60px;
 }
 
 .input-container {
@@ -31,6 +30,7 @@ input {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-left: 60px;
 }
 
 .units {
@@ -43,3 +43,38 @@ input {
   border-radius: 10px;
   font-size: 15px;
 }
+
+.recipe-divider {
+  width: 60%;
+  margin-top: 40px;
+}
+
+.recipe-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.recipe-title {
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.recipe-text {
+  font-size: 12px;
+}
+
+.nutrition-facts span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.nutrition-facts span p {
+  font-weight: 200;
+  margin-left: 5px;
+}
+
