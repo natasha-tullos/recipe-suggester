@@ -1,0 +1,23 @@
+.recipe-wrapper {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ingredients-info {
+  text-align: center;
+}
+
+li {
+  margin: 10px;
+}
+
+.instructions-title {
+  text-align: center;
+}
+
+.prep-info, .ingredients-info {
+  margin-bottom: 30px;
+}

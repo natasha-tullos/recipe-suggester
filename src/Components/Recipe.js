@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Navbar from './Navbar';
+import '../Stylesheets/Recipe.css';
 
 const Recipe = ({ isAuthenticated, setAuth }) => {
   const [recipe, setRecipe] = useState();
@@ -21,25 +22,29 @@ const Recipe = ({ isAuthenticated, setAuth }) => {
       <Navbar isAuthenticated={isAuthenticated} setAuth={setAuth} />
       {/* <h1>{recipe.name}</h1> */}
       {recipe ? (
-          <div>
-            <h1>{recipe.title}</h1>
+          <div className="recipe-wrapper">
+            <h1 className="title">{recipe.title}</h1>
             <img src={recipe.image} />
             
-            <h3>Preparation Information</h3>
             <div className="prep-info">
-              <span>Preparation Minutes: <p>{recipe.preparationMinutes}</p></span>
-              <span>Cooking Minutes: <p>{recipe.cookingMinutes}</p></span>
+              <h3>Preparation Information</h3>
+              <div className="info">
+                <span>Preparation Minutes: <p>{recipe.preparationMinutes}</p></span>
+                <span>Cooking Minutes: <p>{recipe.cookingMinutes}</p></span>
+              </div>
             </div>
 
-            <h3>Ingredients</h3>
             <div className="ingredients-info">
+              <h3>Ingredients</h3>
               {
                 recipe.extendedIngredients.map(ingredient => <p>{ingredient.original}</p>)
               }
             </div>
 
-            <h3>Instructions</h3>
+            <hr className="recipe-divider" />
+
             <div className="recipe-instructions-wrapper">
+              <h3 className="instructions-title">Instructions</h3>
               <ol>
                 {recipe.analyzedInstructions[0].steps.map((steps, idx) => <li>{steps.step}</li>)}
               </ol>
