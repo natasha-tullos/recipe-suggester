@@ -11,7 +11,8 @@ const Main = ({ isAuthenticated, setAuth }) => {
   const [recipes, setRecipes] = useState();
 
   const getRecipes = async () => {
-    await fetch(`https://api.spoonacular.com/recipes/findByNutrients?apiKey=${process.env.REACT_APP_SPOON_KEY}&maxCarbs=${carbs}&maxProtein=${protein}&maxFat=${fats}&number=${12}`,
+    await fetch(
+      `https://api.spoonacular.com/recipes/findByNutrients?apiKey=${process.env.REACT_APP_SPOON_KEY}&minCarbs=${carbs * .95}&maxCarbs=${carbs * 1.05}&minProtein=${protein * .95}&maxProtein=${protein * 1.05}&minFat=${fats * .95}&maxFat=${fats * 1.05}&number=${12}`,
       {
         method: 'GET'
       })
